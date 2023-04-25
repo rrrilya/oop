@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{935E4CFF-F55F-4555-8349-A3E419487364}"
+	ProjectSection(SolutionItems) = preProject
+		fraction.cpp = fraction.cpp
+		fraction.h = fraction.h
+		LAB_OOP_1.cpp = LAB_OOP_1.cpp
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F08B099-B8B9-434B-8B22-2580A2450605}
+	EndGlobalSection
+EndGlobal
