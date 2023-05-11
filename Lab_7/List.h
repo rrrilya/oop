@@ -140,7 +140,7 @@ void List<T>::pop_front()
 	}
 	else
 	{
-		system("cls"); cout << "Ñïèñîê ïóñò!\n\n";
+		system("cls"); cout << "â€”Ð¿Ð¸ÑÐ¾Ðº Ð¿ÑƒÑÑ‚!\n\n";
 	}
 }
 template <typename T>
@@ -175,7 +175,7 @@ void List<T>::pop_back()
 			head = nullptr;
 		--size;
 	}
-	else { system("cls"); cout << "Ñïèñîê ïóñò!\n\n"; }
+	else { system("cls"); cout << "â€”Ð¿Ð¸ÑÐ¾Ðº Ð¿ÑƒÑÑ‚!\n\n"; }
 }
 template <typename T>
 void List<T>::show_list()
@@ -198,7 +198,7 @@ void List<T>::show_list()
 		}
 		case 2:
 		{
-			cout << "Ñïèñîê: ";
+			cout << "â€”Ð¿Ð¸ÑÐ¾Ðº: ";
 			Node* current = tail;
 			for (size_t i = size; i > 0; i--)
 			{
@@ -209,11 +209,11 @@ void List<T>::show_list()
 			break;
 		}
 		default:
-			system("cls"); cout << "Îøèáêà ââîäà!\n";
+			system("cls"); cout << "ÑœÑˆÐ¸Ð±ÐºÐ° Ð²Ð²Ð¾Ð´Ð°!\n";
 			break;
 		}
 	}
-	else { system("cls"); cout << "Ñïèñîê ïóñò!\n"; }
+	else { system("cls"); cout << "â€”Ð¿Ð¸ÑÐ¾Ðº Ð¿ÑƒÑÑ‚!\n"; }
 }
 template <typename T>
 void List<T>::add_after(int number, T data)
@@ -256,9 +256,9 @@ void List<T>::add_after(int number, T data)
 				}
 			}
 		}
-		else { system("cls"); cout << "Îøèáêà ââîäà!\n\n"; }
+		else { system("cls"); cout << "ÑœÑˆÐ¸Ð±ÐºÐ° Ð²Ð²Ð¾Ð´Ð°!\n\n"; }
 	}
-	else { system("cls"); cout << "Ñïèñîê ïóñò!\n\n"; }
+	else { system("cls"); cout << "â€”Ð¿Ð¸ÑÐ¾Ðº Ð¿ÑƒÑÑ‚!\n\n"; }
 }
 template <typename T>
 void List<T>::pop_element(int number)
@@ -298,9 +298,9 @@ void List<T>::pop_element(int number)
 				--size;
 			}
 		}
-		else { system("cls"); cout << "Îøèáêà ââîäà!\n\n"; }
+		else { system("cls"); cout << "ÑœÑˆÐ¸Ð±ÐºÐ° Ð²Ð²Ð¾Ð´Ð°!\n\n"; }
 	}
-	else { system("cls"); cout << "Ñïèñîê ïóñò!\n\n"; }
+	else { system("cls"); cout << "â€”Ð¿Ð¸ÑÐ¾Ðº Ð¿ÑƒÑÑ‚!\n\n"; }
 }
 
 template <typename T>
