@@ -17,18 +17,18 @@ int main()
 		b.push_back(i-1);
 	}
 
-	cout << "Ëèñò à:\n";
+	cout << "Ğ‹Ğ¸ÑÑ‚ Ğ°:\n";
 	a.show_list();
 
-	cout << "\nËèñò b:\n";
+	cout << "\nĞ‹Ğ¸ÑÑ‚ b:\n";
 	b.show_list();
 
-	cout << "\nËèñò ñ = a*b :\n";
+	cout << "\nĞ‹Ğ¸ÑÑ‚ Ñ = a*b :\n";
 	c = a * b;
 	c.show_list();
-	cout << "\nĞàçìåğ ëèñòà c: " << c() << endl << endl;
-	cout << "\nïğèñâîèòü c[5] = 150" << endl; c[5] = 150;
-	cout << "\nËèñò ñ:\n";
+	cout << "\nâ€“Ğ°Ğ·Ğ¼ĞµÑ€ Ğ»Ğ¸ÑÑ‚Ğ° c: " << c() << endl << endl;
+	cout << "\nĞ¿Ñ€Ğ¸ÑĞ²Ğ¾Ğ¸Ñ‚ÑŒ c[5] = 150" << endl; c[5] = 150;
+	cout << "\nĞ‹Ğ¸ÑÑ‚ Ñ:\n";
 	c.show_list();
 
 	List<Pair> p;
@@ -36,12 +36,12 @@ int main()
 
 	for (int i = 0; i < 3; i++)
 	{
-		cout << "\nÂâåäèòå ïàğó:\n";
+		cout << "\nÂ¬Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¿Ğ°Ñ€Ñƒ:\n";
 		cin >> x;
 		p.push_back(x);
 	}
 
-	cout << "\nÑïèñîê p: ";
+	cout << "\nâ€”Ğ¿Ğ¸ÑĞ¾Ğº p: ";
 	p.show_list();
 
 	return 0;
