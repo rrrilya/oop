@@ -1,37 +1,37 @@
-#include "Money.h" // подключение заголовочного файла
+#include "Money.h" // РїРѕРґРєР»СЋС‡РµРЅРёРµ Р·Р°РіРѕР»РѕРІРѕС‡РЅРѕРіРѕ С„Р°Р№Р»Р°
 
-Money::Money() { // реализация конструктора по умолчанию
+Money::Money() { // СЂРµР°Р»РёР·Р°С†Рёв‚¬ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
     rubles = 0;
     kopeks = 0;
 }
 
-Money::Money(long r, int k) { // реализация конструктора с параметрами
+Money::Money(long r, int k) { // СЂРµР°Р»РёР·Р°С†РёСЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
     rubles = r;
     kopeks = k;
 }
 
-Money::Money(const Money& other) { // реализация конструктора копирования
+Money::Money(const Money& other) { // СЂРµР°Р»РёР·Р°С†РёСЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° РєРѕРїРёСЂРѕРІР°РЅРёв‚¬
     rubles = other.rubles;
     kopeks = other.kopeks;
 }
 
-long Money::getRubles() const { // реализация метода получения рублей
+long Money::getRubles() const { // СЂРµР°Р»РёР·Р°С†РёСЏ РјРµС‚РѕРґР° РїРѕР»СѓС‡РµРЅРёв‚¬ СЂСѓР±Р»РµР№
     return rubles;
 }
 
-int Money::getKopeks() const { // реализация метода получения копеек
+int Money::getKopeks() const { // СЂРµР°Р»РёР·Р°С†РёСЏ РјРµС‚РѕРґР° РїРѕР»СѓС‡РµРЅРёв‚¬ РєРѕРїРµРµРє
     return kopeks;
 }
 
-void Money::setRubles(long r) { // реализация метода установки рублей
+void Money::setRubles(long r) { // СЂРµР°Р»РёР·Р°С†РёСЏ РјРµС‚РѕРґР° СѓСЃС‚Р°РЅРѕРІРєРё СЂСѓР±Р»РµР№
     rubles = r;
 }
 
-void Money::setKopeks(int k) { // реализация метода установки копеек
+void Money::setKopeks(int k) { // СЂРµР°Р»РёР·Р°С†РёСЏ РјРµС‚РѕРґР° СѓСЃС‚Р°РЅРѕРІРєРё РєРѕРїРµРµРє
     kopeks = k;
 }
 
-Money Money::operator+ (const Money& other) const { // реализация перегрузки оператора сложения
+Money Money::operator+ (const Money& other) const { // СЂРµР°Р»РёР·Р°С†РёСЏ РїРµСЂРµРіСЂСѓР·РєРё РѕРїРµСЂР°С‚РѕСЂР° СЃР»РѕР¶РµРЅРёСЏ
     long r = rubles + other.rubles;
     int k = kopeks + other.kopeks;
     if (k >= 100) {
@@ -41,7 +41,7 @@ Money Money::operator+ (const Money& other) const { // реализация перегрузки опе
     return Money(r, k);
 }
 
-Money Money::operator- (const Money& other) const { // реализация перегрузки оператора вычитания
+Money Money::operator- (const Money& other) const { // СЂРµР°Р»РёР·Р°С†РёСЏ РїРµСЂРµРіСЂСѓР·РєРё РѕРїРµСЂР°С‚РѕСЂР° РІС‹С‡РёС‚Р°РЅРёСЏ
     long r = rubles - other.rubles;
     int k = kopeks - other.kopeks;
     if (k < 0) {
@@ -51,12 +51,12 @@ Money Money::operator- (const Money& other) const { // реализация перегрузки опе
     return Money(r, k);
 }
 
-std::ostream& operator<< (std::ostream& out, const Money& m) { // реализация перегрузки оператора вывода в поток
+std::ostream& operator<< (std::ostream& out, const Money& m) { // СЂРµР°Р»РёР·Р°С†РёСЏ РїРµСЂРµРіСЂСѓР·РєРё РѕРїРµСЂР°С‚РѕСЂР° РІС‹РІРѕРґР° РІ РїРѕС‚РѕРє
     out << m.rubles << "," << m.kopeks;
     return out;
 }
 
-std::istream& operator>> (std::istream& is, Money& m) { // реализация перегрузки оператора ввода из потока
+std::istream& operator>> (std::istream& is, Money& m) { // СЂРµР°Р»РёР·Р°С†РёСЏ РїРµСЂРµРіСЂСѓР·РєРё РѕРїРµСЂР°С‚РѕСЂР° РІРІРѕРґР° РёР· РїРѕС‚РѕРєР°
     long r;
     int k;
     char comma;
