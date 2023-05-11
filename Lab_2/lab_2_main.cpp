@@ -6,7 +6,6 @@ int main()
 	Computer comp2("Intel Core i5", 8, 500);
 	Computer comp3(comp2);
 
-	// Âûâîä èíôîðìàöèè î êàæäîì îáúåêòå
 	std::cout << "Computer 1:" << std::endl;
 	comp1.show();
 	std::cout << "Computer 2:" << std::endl;
