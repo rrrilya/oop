@@ -1,32 +1,32 @@
 #include"Header.h"
 
-int triad::getFirst() const
+int triad:: getFirst() const
 {
 	return first;
 }
-int triad::getSecond() const
+int triad:: getSecond() const
 {
 	return second;
 }
-int triad::getThird() const
+int triad:: getThird() const
 {
 	return third;
 }
 
-void triad::setFirst(int f)
+void triad:: setFirst(int f)
 {
 	first = f;
 }
-void triad::setSecond(int s)
+void triad:: setSecond(int s)
 {
 	second = s;
 }
-void triad::setThird(int t)
+void triad:: setThird(int t)
 {
 	third = t;
 }
 
-void triad::print()
+void triad:: print()
 {
 	cout << "(" << first << ", " << second << ", " << third << ")";
 }
@@ -40,28 +40,28 @@ bool triad:: operator!=(const triad& t) const
 	return !(operator==(t));
 }
 
-int Time::getHours() const
+int Time:: getHours() const
 {
 	return first;
 }
-int Time::getMinutes() const
+int Time:: getMinutes() const
 {
 	return second;
 }
-int Time::getSeconds() const
+int Time:: getSeconds() const
 {
 	return third;
 }
 
-void Time::setHours(int h)
+void Time:: setHours(int h)
 {
 	first = h;
 }
-void Time::setMinutes(int m)
+void Time:: setMinutes(int m)
 {
 	second = m;
 }
-void Time::setSeconds(int s)
+void Time:: setSeconds(int s)
 {
 	third = s;
 }
@@ -99,11 +99,11 @@ Time& Time:: operator=(const Time& t)
 
 istream& operator>>(istream& is, Time& t)
 {
-	cout << endl << "Ââåäèòå ÷àñû: ";
+	cout << endl << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð°ÑÑ‹: ";
 	is >> t.first;
-	cout << "Ââåäèòå ìèíóòû: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼Ð¸Ð½ÑƒÑ‚Ñ‹: ";
 	is >> t.second;
-	cout << "Ââåäèòå ñåêóíäû: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐµÐºÑƒÐ½Ð´Ñ‹: ";	
 	is >> t.third;
 	return is;
 }
