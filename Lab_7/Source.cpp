@@ -17,10 +17,10 @@ int main()
 		b.push_back(i-1);
 	}
 
-	cout << "Ћист а:\n";
+	cout << "лист а:\n";
 	a.show_list();
 
-	cout << "\nЋист b:\n";
+	cout << "\лист b:\n";
 	b.show_list();
 
 	cout << "\nЋист с = a*b :\n";
