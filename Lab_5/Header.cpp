@@ -99,11 +99,11 @@ Time& Time:: operator=(const Time& t)
 
 istream& operator>>(istream& is, Time& t)
 {
-	cout << endl << "Ââåäèòå ÷àñû: ";
+	cout << endl << "Â¬Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð°ÑÑ‹: ";
 	is >> t.first;
-	cout << "Ââåäèòå ìèíóòû: ";
+	cout << "Â¬Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼Ð¸Ð½ÑƒÑ‚Ñ‹: ";
 	is >> t.second;
-	cout << "Ââåäèòå ñåêóíäû: ";
+	cout << "Â¬Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐµÐºÑƒÐ½Ð´Ñ‹: ";
 	is >> t.third;
 	return is;
 }
@@ -125,7 +125,7 @@ void Vector:: fillVector(triad* p)
 ostream& operator<<(ostream& os, Vector& v)
 {
 	if (v.size == 0)
-		cout << "\nÂåêòîð ïóñò";
+		cout << "\nÂ¬ÐµÐºÑ‚Ð¾Ñ€ Ð¿ÑƒÑÑ‚";
 	else
 	{
 		triad** p = v.obj;
