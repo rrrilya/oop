@@ -1,28 +1,28 @@
 #include <iostream>
 using namespace std;
 
-class LinearEquation { // объявление класса LinearEquation
+class LinearEquation { 
 private:
-    double A; // поле first - коэффициент A
-    double B; // поле second - коэффициент B
+    double A; 
+    double B; 
 public:
-    LinearEquation(double a, double b) { // конструктор класса с двумя аргументами типа double
+    LinearEquation(double a, double b) { 
         A = a;
         B = b;
     }
-    double function(double x) { // метод function() вычисляет значение функции для заданного x и возвращает его значение
+    double function(double x) { 
         return A*x + B;
     }
 };
 
 int main() {
     double a, b, x;
-    cout << "Введите коэффициенты линейного уравнения (A и B): ";
+    cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®ГЅГґГґГЁГ¶ГЁГҐГ­ГІГ» Г«ГЁГ­ГҐГ©Г­Г®ГЈГ® ГіГ°Г ГўГ­ГҐГ­ГЁГї (A ГЁ B): ";
     cin >> a >> b;
-    LinearEquation equation(a, b); // создание объекта класса LinearEquation с заданными коэффициентами
-    cout << "Введите значение x: ";
+    LinearEquation equation(a, b);
+    cout << "Г‚ГўГҐГ¤ГЁГІГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ x: ";
     cin >> x;
-    double result = equation.function(x); // вызов метода function() для вычисления значения функции для заданного x
-    cout << "Значение функции для x = " << x << ": " << result << endl; // вывод результата
+    double result = equation.function(x); 
+    cout << "Г‡Г­Г Г·ГҐГ­ГЁГҐ ГґГіГ­ГЄГ¶ГЁГЁ Г¤Г«Гї x = " << x << ": " << result << endl; 
     return 0;
 }
