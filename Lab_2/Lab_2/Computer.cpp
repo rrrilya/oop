@@ -2,54 +2,54 @@
 #include "Computer.h"
 #include <iostream>
 
-// Конструктор без параметров
+// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
 Computer::Computer()
 {
-	processor = "";
-	this->ram = 0;
-	this->hdd = 0;
+ processor = "";
+ this->ram = 0;
+ this->hdd = 0;
 }
-// Конструктор с параметрами
+// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 Computer::Computer(std::string processor, int ram, int hdd)
 {
-	this->processor = processor;
-	this->ram = ram;
-	this->hdd = hdd;
+ this->processor = processor;
+ this->ram = ram;
+ this->hdd = hdd;
 }
-// Конструктор копирования
+// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
 Computer::Computer(const Computer& obj)
 {
-	this->processor = obj.processor;
-	this->ram = obj.ram;
-	this->hdd = obj.hdd;
+ this->processor = obj.processor;
+ this->ram = obj.ram;
+ this->hdd = obj.hdd;
 }
-// Деструктор
+// Р”РµСЃС‚СЂСѓРєС‚РѕСЂ
 Computer::~Computer()
 {
-	std::cout << "Удаление объекта: " << this << std::endl;
+ std::cout << "РЈРґР°Р»РµРЅРёРµ РѕР±СЉРµРєС‚Р°: " << this << std::endl;
 }
-// Геттер оперативной памяти
+// Р“РµС‚С‚РµСЂ РѕРїРµСЂР°С‚РёРІРЅРѕР№ РїР°РјСЏС‚Рё
 int Computer::getram()
 {
-	return ram;
+ return ram;
 }
-// Сеттер оперативной памяти
+// РЎРµС‚С‚РµСЂ РѕРїРµСЂР°С‚РёРІРЅРѕР№ РїР°РјСЏС‚Рё
 void Computer::setram(int ram)
 {
-	this->ram = ram;
+ this->ram = ram;
 }
-// Геттер объема жесткого диска
+// Р“РµС‚С‚РµСЂ РѕР±СЉРµРјР° Р¶РµСЃС‚РєРѕРіРѕ РґРёСЃРєР°
 int Computer::gethdd()
 {
-	return hdd;
+ return hdd;
 }
-// Сеттер объема жесткого диска
+// РЎРµС‚С‚РµСЂ РѕР±СЉРµРјР° Р¶РµСЃС‚РєРѕРіРѕ РґРёСЃРєР°
 void Computer::sethdd(int hdd)
 {
-	this->hdd = hdd;
+ this->hdd = hdd;
 }
-// Вывод локальных атрибутов объекта класса Computer
+// Р’С‹РІРѕРґ Р»РѕРєР°Р»СЊРЅС‹С… Р°С‚СЂРёР±СѓС‚РѕРІ РѕР±СЉРµРєС‚Р° РєР»Р°СЃСЃР° Computer
 void Computer::show()
 {
-	std::cout << "Processor: " << processor << std::endl << "RAM: " << ram << std::endl << "HDD: " << hdd << std::endl;
+ std::cout << "Processor: " << processor << std::endl << "RAM: " << ram << std::endl << "HDD: " << hdd << std::endl;
 }
