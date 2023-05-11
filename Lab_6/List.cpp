@@ -63,7 +63,7 @@ void List::pop_front()
 	}
 	else
 	{
-		system("cls"); cout << "Ñïèñîê ïóñò!\n\n";
+		system("cls"); cout << "â€”Ð¿Ð¸ÑÐ¾Ðº Ð¿ÑƒÑÑ‚!\n\n";
 	}
 }
 void List::push_back(int data)
@@ -96,7 +96,7 @@ void List::pop_back()
 			head = nullptr;
 		--size;
 	}
-	else { system("cls"); cout << "Ñïèñîê ïóñò!\n\n"; }
+	else { system("cls"); cout << "â€”Ð¿Ð¸ÑÐ¾Ðº Ð¿ÑƒÑÑ‚!\n\n"; }
 }
 void List::show_list()
 {
@@ -104,14 +104,14 @@ void List::show_list()
 	if (head != nullptr)
 	{
 		int choice = 1;
-		/*cout << "Ââåäèòå 1 - âûâîä ñïèñêà ñ íà÷àëà\nÂâåäèòå 2 - âûâîä ñïèñêà ñ êîíöà\n\n";
+		/*cout << "Â¬Ð²ÐµÐ´Ð¸Ñ‚Ðµ 1 - Ð²Ñ‹Ð²Ð¾Ð´ ÑÐ¿Ð¸ÑÐºÐ° Ñ Ð½Ð°Ñ‡Ð°Ð»Ð°\nÂ¬Ð²ÐµÐ´Ð¸Ñ‚Ðµ 2 - Ð²Ñ‹Ð²Ð¾Ð´ ÑÐ¿Ð¸ÑÐºÐ° Ñ ÐºÐ¾Ð½Ñ†Ð°\n\n";
 		cin >> choice;
 		system("cls");*/
 		switch (choice)
 		{
 		case 1:
 		{
-			/*cout << "Ñïèñîê: ";*/
+			/*cout << "â€”Ð¿Ð¸ÑÐ¾Ðº: ";*/
 			Node* current = head;
 			for (size_t i = 0; i < size; i++)
 			{
@@ -123,7 +123,7 @@ void List::show_list()
 		}
 		case 2:
 		{
-			cout << "Ñïèñîê: ";
+			cout << "â€”Ð¿Ð¸ÑÐ¾Ðº: ";
 			Node* current = tail;
 			for (size_t i = size; i > 0; i--)
 			{
@@ -134,11 +134,11 @@ void List::show_list()
 			break;
 		}
 		default:
-			system("cls"); cout << "Îøèáêà ââîäà!\n";
+			system("cls"); cout << "ÑœÑˆÐ¸Ð±ÐºÐ° Ð²Ð²Ð¾Ð´Ð°!\n";
 			break;
 		}
 	}
-	else { system("cls"); cout << "Ñïèñîê ïóñò!\n"; }
+	else { system("cls"); cout << "â€”Ð¿Ð¸ÑÐ¾Ðº Ð¿ÑƒÑÑ‚!\n"; }
 }
 void List::add_after(int number, int data)
 {
@@ -180,9 +180,9 @@ void List::add_after(int number, int data)
 				}
 			}
 		}
-		else { system("cls"); cout << "Îøèáêà ââîäà!\n\n"; }
+		else { system("cls"); cout << "ÑœÑˆÐ¸Ð±ÐºÐ° Ð²Ð²Ð¾Ð´Ð°!\n\n"; }
 	}
-	else { system("cls"); cout << "Ñïèñîê ïóñò!\n\n"; }
+	else { system("cls"); cout << "â€”Ð¿Ð¸ÑÐ¾Ðº Ð¿ÑƒÑÑ‚!\n\n"; }
 }
 void List::pop_element(int number)
 {
@@ -221,9 +221,9 @@ void List::pop_element(int number)
 				--size;
 			}
 		}
-		else { system("cls"); cout << "Îøèáêà ââîäà!\n\n"; }
+		else { system("cls"); cout << "ÑœÑˆÐ¸Ð±ÐºÐ° Ð²Ð²Ð¾Ð´Ð°!\n\n"; }
 	}
-	else { system("cls"); cout << "Ñïèñîê ïóñò!\n\n"; }
+	else { system("cls"); cout << "â€”Ð¿Ð¸ÑÐ¾Ðº Ð¿ÑƒÑÑ‚!\n\n"; }
 }
 
 int& List::operator[](const int index) const
