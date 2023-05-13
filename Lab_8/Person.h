@@ -8,17 +8,17 @@ class Person :
 protected:
 	string name;
 	int age;
-	friend istream& operator>>(istream& in, Person& p);			// ввод
-	friend ostream& operator<<(ostream& out, const Person& p);	// вывод
+	friend istream& operator>>(istream& in, Person& p);			// РІРІРѕРґ
+	friend ostream& operator<<(ostream& out, const Person& p);	// РІС‹РІРѕРґ
 public:
-	void set_name(string name);									// сеттер имени
-	void set_age(int age);										// сеттер возраста
-	string get_name();											// геттер имени
-	int get_age();												// геттер возраста
-	Person();													// конструктор без параметров
-	Person(string name, int age);								// конструктор с параметрами
-	Person(const Person& p);									// конструктор копирования
-	~Person();													// деструктор
+	void set_name(string name);									// СЃРµС‚С‚РµСЂ РёРјРµРЅРё
+	void set_age(int age);										// СЃРµС‚С‚РµСЂ РІРѕР·СЂР°СЃС‚Р°
+	string get_name();											// РіРµС‚С‚РµСЂ РёРјРµРЅРё
+	int get_age();												// РіРµС‚С‚РµСЂ РІРѕР·СЂР°СЃС‚Р°
+	Person();													// РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
+	Person(string name, int age);								// РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
+	Person(const Person& p);									// РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёв‚¬
+	~Person();													// РґРµСЃС‚СЂСѓРєС‚РѕСЂ
 	void Show();
 	void HandleEvent(const TEvent& e);
 	int AvgAge() { return age;  }
