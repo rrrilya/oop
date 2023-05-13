@@ -1,25 +1,25 @@
 #include "Dialog.h"
 
-//конструктор 
+//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 
 Dialog::Dialog(void):Vector()
 {
 	EndState = 0;
 }
-//деструктор 
+//РґРµСЃС‚СЂСѓРєС‚РѕСЂ 
 Dialog::~Dialog(void)
 {
 }
-//получение события
+//РїРѕР»СѓС‡РµРЅРёРµ СЃРѕР±С‹С‚Рёв‚¬
 void Dialog::GetEvent(TEvent& event)
 {
-	string OpInt = "+-mszq"; //строка содержит коды операций 
+	string OpInt = "+-mszq"; //СЃС‚СЂРѕРєР° СЃРѕРґРµСЂР¶РёС‚ РєРѕРґС‹ РѕРїРµСЂР°С†РёР№ 
 	string s;
 	string param;
 
 	char code; 
 	cout << '>';
-	cin >> s; code = s[0];//первый символ команды 
-	if(OpInt.find(code)>=0)//является ли символ кодом операции
+	cin >> s; code = s[0];//РїРµСЂРІС‹Р№ СЃРёРјРІРѕР» РєРѕРјР°РЅРґС‹ 
+	if(OpInt.find(code)>=0)//в‚¬РІР»в‚¬РµС‚СЃв‚¬ Р»Рё СЃРёРјРІРѕР» РєРѕРґРѕРј РѕРїРµСЂР°С†РёРё
 	{
 		event.what = evMessage; 
 		switch (code)
@@ -32,15 +32,15 @@ void Dialog::GetEvent(TEvent& event)
 		case 'q': event.command = cmQuit; break;
 		}
 
-		//выделяем параметры команды, если они есть 
+		//РІС‹РґРµР»в‚¬РµРј РїР°СЂР°РјРµС‚СЂС‹ РєРѕРјР°РЅРґС‹, РµСЃР»Рё РѕРЅРё РµСЃС‚СЊ 
 		if(s.length()>1)
 		{
 			param = s.substr(1, s.length() - 1);
-			int A = atoi(param.c_str());//преобразуем парметр в число 
-			event.a=A;//записываем в сообщение
+			int A = atoi(param.c_str());//РїСЂРµРѕР±СЂР°Р·СѓРµРј РїР°СЂРјРµС‚СЂ РІ С‡РёСЃР»Рѕ 
+			event.a=A;//Р·Р°РїРёСЃС‹РІР°РµРј РІ СЃРѕРѕР±С‰РµРЅРёРµ
 		}
 	}
-	else event.what = evNothing;//пустое событие
+	else event.what = evNothing;//РїСѓСЃС‚РѕРµ СЃРѕР±С‹С‚РёРµ
 }
 
 int Dialog::Execute()
@@ -48,8 +48,8 @@ int Dialog::Execute()
 	TEvent event; 
 	do {
 		EndState = 0;
-		GetEvent(event); //получить событие 
-		HandleEvent(event); //обработать событие
+		GetEvent(event); //РїРѕР»СѓС‡РёС‚СЊ СЃРѕР±С‹С‚РёРµ 
+		HandleEvent(event); //РѕР±СЂР°Р±РѕС‚Р°С‚СЊ СЃРѕР±С‹С‚РёРµ
 
 	} while (!Valid()); return EndState;
 }
@@ -60,37 +60,37 @@ int Dialog::Valid()
 }
 void Dialog::ClearEvent(TEvent& event)
 {
-	event.what = evNothing;//пустое событие
+	event.what = evNothing;//РїСѓСЃС‚РѕРµ СЃРѕР±С‹С‚РёРµ
 }
 
 void Dialog::EndExec()
 {
 	EndState = 1;
 }
-//обработчик событий
+//РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёР№
 void Dialog::HandleEvent(TEvent& event)
 {
 	if (event.what == evMessage)
 	{
 		switch (event.command)
 		{
-		case cmMake://создание группы 
-			size=event.a; //размер группы
-			beg = new Object * [size];//выделяем память под массив указателей
-			cur=0; //текущая позиция
-			ClearEvent(event);//очищаем событие
+		case cmMake://СЃРѕР·РґР°РЅРёРµ РіСЂСѓРїРїС‹ 
+			size=event.a; //СЂР°Р·РјРµСЂ РіСЂСѓРїРїС‹
+			beg = new Object * [size];//РІС‹РґРµР»в‚¬РµРј РїР°Рјв‚¬С‚СЊ РїРѕРґ РјР°СЃСЃРёРІ СѓРєР°Р·Р°С‚РµР»РµР№
+			cur=0; //С‚РµРєСѓС‰Р°в‚¬ РїРѕР·РёС†Рёв‚¬
+			ClearEvent(event);//РѕС‡РёС‰Р°РµРј СЃРѕР±С‹С‚РёРµ
 			break;
-		case cmAdd://добавление
+		case cmAdd://РґРѕР±Р°РІР»РµРЅРёРµ
 			Add(); 
 			ClearEvent(event); 
 			break;
-		case cmDel:Del(); //удаление 
+		case cmDel:Del(); //СѓРґР°Р»РµРЅРёРµ 
 			ClearEvent( event ); break;
-		case cmShow:Show(); //просмотр 
+		case cmShow:Show(); //РїСЂРѕСЃРјРѕС‚СЂ 
 			ClearEvent( event );
 			break;
 		case cmQuit:
-			EndExec(); //выход 
+			EndExec(); //РІС‹С…РѕРґ 
 			ClearEvent( event );
 			break;
 		case cmGet:	
