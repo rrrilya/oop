@@ -15,7 +15,7 @@ Student::Student(string name, int age, string subject, int mark)
 }
 Student::~Student()
 {
-	cout << "Äåñòğóêòîğ îáúåêòà êëàññà Student" << endl;
+	cout << "ĞµÑÑ‚Ñ€ÑƒĞºÑ‚Ğ¾Ñ€ Ğ¾Ğ±ÑŠĞµĞºÑ‚Ğ° ĞºĞ»Ğ°ÑÑĞ° Student" << endl;
 }
 Student::Student(const Student& s)
 {
@@ -47,10 +47,10 @@ void Student::Show()
 bool Student::is_norm()
 {
 	if (mark < 4) {
-		cout << "Ïëîõàÿ îöåíêà!" << endl;
+		cout << "Ñ•Ğ»Ğ¾Ñ…Ğ°â‚¬ Ğ¾Ñ†ĞµĞ½ĞºĞ°!" << endl;
 		return 0;
 	}
-	cout << "Õîğîøàÿ îöåíêà!" << endl;
+	cout << "â€™Ğ¾Ñ€Ğ¾ÑˆĞ°â‚¬ Ğ¾Ñ†ĞµĞ½ĞºĞ°!" << endl;
 	return 1;
 
 
