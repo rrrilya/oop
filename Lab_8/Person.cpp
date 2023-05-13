@@ -17,7 +17,7 @@ Person::Person(const Person& p)
 }
 Person::~Person()
 {
-	cout << "Вызван деструктор для объекта класса Person!" << endl;
+	cout << "РІС‹Р·РІР°РЅ РґРµСЃС‚СЂСѓРєС‚РѕСЂ РґР»СЏ РѕР±СЉРµРєС‚Р° РєР»Р°СЃСЃР° Person!" << endl;
 }
 istream& operator>>(istream& in, Person& p)
 {
@@ -54,7 +54,7 @@ void Person::Show()
 
 void Person::HandleEvent(const TEvent& e)
 {
-	if (e.what == evMessage)//событие-сообщение
+	if (e.what == evMessage)//СЃРѕР±С‹С‚РёРµ-СЃРѕРѕР±С‰РµРЅРёРµ
 	{
 		switch (e.command)
 		{
