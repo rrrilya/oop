@@ -1,0 +1,16 @@
+﻿  main.cpp
+C:\Users\monlan\Documents\lab_12\lab_12\main.cpp(66,21): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\monlan\Documents\lab_12\lab_12\main.cpp(67,21): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\monlan\Documents\lab_12\lab_12\main.cpp(77,21): warning C4267: /=: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\monlan\Documents\lab_12\lab_12\main.cpp(118,21): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\monlan\Documents\lab_12\lab_12\main.cpp(119,21): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\monlan\Documents\lab_12\lab_12\main.cpp(129,21): warning C4267: /=: преобразование из "size_t" в "int"; возможна потеря данных
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ "class std::basic_istream<char,struct std::char_traits<char> > & __cdecl operator>>(class std::basic_istream<char,struct std::char_traits<char> > &,class Pair &)" (??5@YAAEAV?$basic_istream@DU?$char_traits@D@std@@@std@@AEAV01@AEAVPair@@@Z) в функции "void __cdecl ex_2(void)" (?ex_2@@YAXXZ).
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ "class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl operator<<(class std::basic_ostream<char,struct std::char_traits<char> > &,class Pair const &)" (??6@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV01@AEBVPair@@@Z) в функции "void __cdecl ex_2(void)" (?ex_2@@YAXXZ).
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: __cdecl Pair::Pair(int,double)" (??0Pair@@QEAA@HN@Z) в функции "void __cdecl ex_2(void)" (?ex_2@@YAXXZ).
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: __cdecl Pair::Pair(void)" (??0Pair@@QEAA@XZ) в функции "void __cdecl ex_2(void)" (?ex_2@@YAXXZ).
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: __cdecl Pair::Pair(class Pair const &)" (??0Pair@@QEAA@AEBV0@@Z) в функции "public: static void __cdecl std::_Default_allocator_traits<class std::allocator<struct std::_Tree_node<class Pair,void *> > >::construct<class Pair,class Pair &>(class std::allocator<struct std::_Tree_node<class Pair,void *> > &,class Pair * const,class Pair &)" (??$construct@VPair@@AEAV1@@?$_Default_allocator_traits@V?$allocator@U?$_Tree_node@VPair@@PEAX@std@@@std@@@std@@SAXAEAV?$allocator@U?$_Tree_node@VPair@@PEAX@std@@@1@QEAVPair@@AEAV3@@Z).
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: __cdecl Pair::~Pair(void)" (??1Pair@@QEAA@XZ) в функции "public: void * __cdecl Pair::`scalar deleting destructor'(unsigned int)" (??_GPair@@QEAAPEAXI@Z).
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: class Pair & __cdecl Pair::operator=(class Pair const &)" (??4Pair@@QEAAAEAV0@AEBV0@@Z) в функции "void __cdecl ex_2(void)" (?ex_2@@YAXXZ).
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: class Pair __cdecl Pair::operator+(class Pair const &)" (??HPair@@QEAA?AV0@AEBV0@@Z) в функции "void __cdecl ex_2(void)" (?ex_2@@YAXXZ).
+C:\Users\monlan\Documents\lab_12\arm64\Debug\lab_12.exe : fatal error LNK1120: неразрешенных внешних элементов: 8
